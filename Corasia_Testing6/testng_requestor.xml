@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Requestor.Error_Cach"/>
+      <parameter name="browsername" value="chrome">
+      <!---
+      <class name="Requestor.QuickAdd"/>
+      <class name="Requestor.BrowserClass"/>
+      <class name="Requestor.UpdateSocialProfile"/>
+      <class name="Requestor.DeactivateSupplierForm"/>
+      <class name="Requestor.CloseSupplierPo"/>
+      <class name="Requestor.Update"/>
+      <class name="Requestor.NewERP"/>
+      <class name="Requestor.UpdateEnvironmentalProfile"/>
+      <class name="Requestor.Reactivateform"/>
+      <class name="Requestor.OpenPo"/>
+      <class name="Requestor.UpdateDPOProfile"/>
+      <class name="Requestor.workshop"/>
+      <class name="Requestor.UpdateGoverNanceProfile"/>
+      <class name="Requestor.PaymentTerm"/>
+      -->
+      </parameter>
+    </classes>
+  </test>
+</suite>
