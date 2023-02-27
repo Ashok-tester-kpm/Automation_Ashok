@@ -8,12 +8,12 @@
       <![CDATA[The Title of the page is Supplier Onboarding - LOGIN ]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-02-21T12:45:19Z" name="Suite" finished-at="2023-02-21T12:46:18Z" duration-ms="58526">
+  <suite started-at="2023-02-22T07:43:59Z" name="Suite" finished-at="2023-02-22T07:45:31Z" duration-ms="91858">
     <groups>
     </groups>
-    <test started-at="2023-02-21T12:45:19Z" name="Test" finished-at="2023-02-21T12:46:18Z" duration-ms="58526">
+    <test started-at="2023-02-22T07:43:59Z" name="Test" finished-at="2023-02-22T07:45:31Z" duration-ms="91858">
       <class name="AllMightyPull.allpush">
-        <test-method is-config="true" signature="browsers(java.lang.String)[pri:0, instance:AllMightyPull.allpush@470734c3]" started-at="2023-02-21T18:15:19Z" name="browsers" finished-at="2023-02-21T18:15:21Z" duration-ms="2109" status="PASS">
+        <test-method is-config="true" signature="browsers(java.lang.String)[pri:0, instance:AllMightyPull.allpush@76b1e9b8]" started-at="2023-02-22T13:13:59Z" name="browsers" finished-at="2023-02-22T13:14:07Z" duration-ms="7966" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,26 +27,26 @@
             </line>
           </reporter-output>
         </test-method> <!-- browsers -->
-        <test-method signature="urlrun()[pri:0, instance:AllMightyPull.allpush@470734c3]" started-at="2023-02-21T18:15:21Z" name="urlrun" finished-at="2023-02-21T18:15:27Z" duration-ms="5952" status="PASS">
+        <test-method signature="urlrun()[pri:0, instance:AllMightyPull.allpush@76b1e9b8]" started-at="2023-02-22T13:14:07Z" name="urlrun" finished-at="2023-02-22T13:14:16Z" duration-ms="8994" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[The Title of the page is Supplier Onboarding - LOGIN ]]>
             </line>
           </reporter-output>
         </test-method> <!-- urlrun -->
-        <test-method signature="login()[pri:0, instance:AllMightyPull.allpush@470734c3]" started-at="2023-02-21T18:15:27Z" name="login" finished-at="2023-02-21T18:15:42Z" duration-ms="14881" status="PASS">
+        <test-method signature="login()[pri:0, instance:AllMightyPull.allpush@76b1e9b8]" started-at="2023-02-22T13:14:16Z" name="login" finished-at="2023-02-22T13:14:37Z" duration-ms="21029" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="selectuserbutton()[pri:0, instance:AllMightyPull.allpush@470734c3]" started-at="2023-02-21T18:15:42Z" name="selectuserbutton" finished-at="2023-02-21T18:15:48Z" duration-ms="6059" status="PASS">
+        <test-method signature="selectuserbutton()[pri:0, instance:AllMightyPull.allpush@76b1e9b8]" started-at="2023-02-22T13:14:37Z" name="selectuserbutton" finished-at="2023-02-22T13:14:50Z" duration-ms="12668" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectuserbutton -->
-        <test-method signature="typeisdropdown()[pri:0, instance:AllMightyPull.allpush@470734c3]" started-at="2023-02-21T18:15:48Z" name="typeisdropdown" finished-at="2023-02-21T18:16:16Z" duration-ms="27388" status="PASS">
+        <test-method signature="typeisdropdown()[pri:0, instance:AllMightyPull.allpush@76b1e9b8]" started-at="2023-02-22T13:14:50Z" name="typeisdropdown" finished-at="2023-02-22T13:15:19Z" duration-ms="29319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- typeisdropdown -->
-        <test-method signature="typeistextbox()[pri:0, instance:AllMightyPull.allpush@470734c3]" started-at="2023-02-21T18:16:16Z" name="typeistextbox" finished-at="2023-02-21T18:16:18Z" duration-ms="2108" status="PASS">
+        <test-method signature="typeistextbox()[pri:0, instance:AllMightyPull.allpush@76b1e9b8]" started-at="2023-02-22T13:15:19Z" name="typeistextbox" finished-at="2023-02-22T13:15:31Z" duration-ms="11847" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- typeistextbox -->

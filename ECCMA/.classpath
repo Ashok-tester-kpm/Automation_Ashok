@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="poi-bin-5.2.3/bsh-2.0b6.jar"/>
+	<classpathentry kind="lib" path="poi-bin-5.2.3/poi-5.2.3.jar"/>
+	<classpathentry kind="lib" path="poi-bin-5.2.3/poi-examples-5.2.3.jar"/>
+	<classpathentry kind="lib" path="poi-bin-5.2.3/poi-excelant-5.2.3.jar"/>
+	<classpathentry kind="lib" path="poi-bin-5.2.3/poi-javadoc-5.2.3.jar"/>
+	<classpathentry kind="lib" path="poi-bin-5.2.3/poi-ooxml-5.2.3.jar"/>
+	<classpathentry kind="lib" path="poi-bin-5.2.3/poi-ooxml-full-5.2.3.jar"/>
+	<classpathentry kind="lib" path="poi-bin-5.2.3/poi-ooxml-lite-5.2.3.jar"/>
+	<classpathentry kind="lib" path="poi-bin-5.2.3/poi-scratchpad-5.2.3.jar"/>
+	<classpathentry kind="lib" path="commons-io-2.11.0.jar"/>
+	<classpathentry kind="lib" path="Software/selenium-server-4.5.3.jar"/>
+	<classpathentry kind="lib" path="Software/selenium-server-4.6.0.jar"/>
+	<classpathentry kind="lib" path="E:/Testing/Testing Software/TestNG/testng-6.8.5.jar"/>
+	<classpathentry kind="lib" path="poi-bin-5.2.3/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

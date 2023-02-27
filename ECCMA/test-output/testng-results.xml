@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Selenium runs Automation in chrome for SDM]]>
+    </line>
+    <line>
+      <![CDATA[The Title of the page is ECCMA | Resources ]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-02-27T13:13:02Z" name="Suite" finished-at="2023-02-27T13:13:16Z" duration-ms="13354">
+    <groups>
+    </groups>
+    <test started-at="2023-02-27T13:13:02Z" name="Test" finished-at="2023-02-27T13:13:16Z" duration-ms="13354">
+      <class name="Publications.SearchAuthor">
+        <test-method is-config="true" signature="browsers(java.lang.String)[pri:0, instance:Publications.SearchAuthor@53fe15ff]" started-at="2023-02-27T18:43:03Z" name="browsers" finished-at="2023-02-27T18:43:06Z" duration-ms="3185" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Selenium runs Automation in chrome for SDM]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- browsers -->
+        <test-method signature="URL()[pri:0, instance:Publications.SearchAuthor@53fe15ff]" started-at="2023-02-27T18:43:06Z" name="URL" finished-at="2023-02-27T18:43:15Z" duration-ms="8844" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[The Title of the page is ECCMA | Resources ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- URL -->
+        <test-method signature="feed()[pri:0, instance:Publications.SearchAuthor@53fe15ff]" started-at="2023-02-27T18:43:15Z" name="feed" finished-at="2023-02-27T18:43:16Z" duration-ms="1303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feed -->
+      </class> <!-- Publications.SearchAuthor -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
