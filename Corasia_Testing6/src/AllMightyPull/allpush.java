@@ -38,9 +38,13 @@ public class allpush extends Base
 								Thread.sleep(3000);
 							}
 				
+				
+				/***************
+				 Report - Excel
+				***************/
 				List<WebElement> dpname = driver.findElements(By.xpath("//span[@class='select2-selection__rendered']/ancestor::div[@class='col-md-6']/preceding-sibling::div//label[@data-html='true']"));
 		  		List<WebElement> dpvalue = driver.findElements(By.xpath("//span[@class='select2-selection__rendered']"));
-				
+		  		
 				//Array list to collect all the drop down Fields with Name and value.
 				//Accessing File from local drive.
 		  		File file = new File ("E:\\Testing\\Projects Undertaken\\eMDV_CORASIA\\Excel Report\\QuickAddFeedData(lbl).xlsx");
@@ -67,6 +71,7 @@ public class allpush extends Base
 	  			FileOutputStream fos = new FileOutputStream(file);
 	  			wb.write(fos);
 	  			wb.close();
+	  			System.out.println("Workbook Loaded");
 			}
 		
 		catch(Exception d) 
@@ -86,43 +91,43 @@ public class allpush extends Base
 				
 				for(int i =0; i<tbx.size(); i++ )
 	    				{
-									//add all field id to text box array tlinks.
-			    					tlinks.add(tbx.get(i).getAttribute("id"));
+							//add all field id to text box array tlinks.
+			    			tlinks.add(tbx.get(i).getAttribute("id"));
 			    					
-			    					//Verify whether the text box is loaded as per the requirement
-			    					String tbxofform =  tbx.get(i).getAttribute("id");
+			    			//Verify whether the text box is loaded as per the requirement
+			    			String tbxofform =  tbx.get(i).getAttribute("id");
 			    					
-			    					boolean req = tbx.get(i).getAttribute("required") != null;
+			    			boolean req = tbx.get(i).getAttribute("required") != null;
 			    					
-			    					if(req == true)
-			    							{
-			    								System.out.println("The Field id "+ tbxofform + " is loaded sucessfully in form"+  ". The Field id "+ tbxofform + " is required");
-			    							}
-			    					else if(req == false)
-			    							{
-			    								System.out.println("The Field id "+ tbxofform + " is not displayed in page. But Loaded in form.");
-			    							}
-								}
-			System.out.println("*Note - If field not displayed, Required or not wont appear as per script");
+			    			if(req == true)
+			    					{
+			    						System.out.println("The Field id "+ tbxofform + " is loaded sucessfully in form"+  ". The Field id "+ tbxofform + " is required");
+			    					}
+			    			else if(req == false)
+			    					{
+			    						System.out.println("The Field id "+ tbxofform + " is not displayed in page. But Loaded in form.");
+			    					}
+						}
+
+				System.out.println("*Note - If field not displayed, Required or not wont appear as per script");
 			
+				ArrayList<String> tbxrequired = new ArrayList<String>();
+				tbxrequired.addAll(Arrays.asList("19_other" , "42" , "2" ,  "5_other" , "4_other" , "1_other" , "6" , "100" , "98 " , "100002 " ,  "7" , "14" , "15" , "16" , "58" , "search_supplier"));
 			
-			ArrayList<String> tbxrequired = new ArrayList<String>();
-			tbxrequired.addAll(Arrays.asList("19_other" , "42" , "2" ,  "5_other" , "4_other" , "1_other" , "6" , "100" , "98 " , "100002 " ,  "7" , "14" , "15" , "16" , "58" , "search_supplier"));
-			
-			if(tlinks.equals(tbxrequired))
-				{
-						System.out.println("The Field matches the required list");
-				}
-				else
-				{
-					tbxrequired.removeAll(tlinks);
-					for(int p = 0 ; p< tbxrequired.size(); p++)
+				if(tlinks.equals(tbxrequired))
 					{
-							System.out.println("The Field does not match the required list "+ tbxrequired.get(p));
+							System.out.println("The Field matches the required list");
 					}
-				}
+					else
+					{
+						tbxrequired.removeAll(tlinks);
+						for(int p = 0 ; p< tbxrequired.size(); p++)
+						{
+								System.out.println("The Field does not match the required list "+ tbxrequired.get(p));
+						}
+					}
 			
-			for(int t = 0 ; t<tlinks.size(); t++ )
+				for(int t = 0 ; t<tlinks.size(); t++ )
 					{
 						if(tlinks.get(t).equals("14")) 
 								{
@@ -169,8 +174,10 @@ public class allpush extends Base
 									driver.findElement(By.id(tlinks.get(t))).sendKeys("TestingData");
 								}
 						
-						
+						/*
+						//Report - Excel
 						List<WebElement> tbname = driver.findElements(By.xpath("//input[@type='text']/parent::div[@class='col-md-5' or @class='col-md-6']/preceding-sibling::div//label[@title]"));
+						//tbx = driver.findElements(By.xpath("//input[@type='text']"));
 						
 						boolean txtexst = tbx.get(t).getText() != null;
 						
@@ -181,25 +188,28 @@ public class allpush extends Base
 			  			wb = new XSSFWorkbook(fis);
 			  			sh = wb.getSheetAt(0);
 			  			
-			  			//Accessing the value  
-			  			for(int tb1 = 0 ; tb1 < tbx.size() ; tb1++)
+			  			//Feeding Excel report  
+			  			for(int tb1 = 0 ; tb1 < tbname.size() ; tb1++)
 			  				{
-			  					//Automation filled fields - fetched data 
-			  					sh.getRow(tb1 + 1).createCell(0).setCellValue(tbx.get(tb1).getText());
+			  					//Automation field Name - Fetching data 
+			  					sh.getRow(tb1 + 8).createCell(0).setCellValue(tbname.get(tb1).getText());
 			  					Thread.sleep(250);
 			  				}
-			  			Thread.sleep(500);
 			  			
-			  			for(int tb2 = 0 ; tb2 < tbx.size() ; tb2 ++)
+			  			Thread.sleep(200);
+			  			
+			  			for(int tb2 = 1 ; tb2 < tbx.size() ; tb2 ++)
 				  			{
-					  			//Automation filled fields - fetched data 
-				  				sh.getRow(tb2 + 1).createCell(1).setCellValue(tbx.get(tb2).getText());
+					  			//Automation filled fields - fetching data 
+				  				sh.getRow(tb2 + 8).createCell(1).setCellValue(tbx.get(tb2).getText());
 				  				Thread.sleep(250);
 				  			}
 			  			
 			  			FileOutputStream fos = new FileOutputStream(file);
 			  			wb.write(fos);
 			  			wb.close();
+			  			System.out.println("Workbook Loaded");
+			  			*/
 					}
 			}
 			catch(Exception E)
