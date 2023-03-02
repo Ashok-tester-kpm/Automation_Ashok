@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="2" passed="2" failed="0" skipped="0">
+<testng-results total="7" passed="6" failed="1" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Selenium runs Automation in chrome for SDM]]>
@@ -8,37 +8,116 @@
       <![CDATA[The Title of the page is ECCMA | Resources ]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-02-27T13:13:02Z" name="Suite" finished-at="2023-02-27T13:13:16Z" duration-ms="13354">
+  <suite started-at="2023-03-01T15:17:04Z" name="Suite" finished-at="2023-03-01T15:17:48Z" duration-ms="44106">
     <groups>
     </groups>
-    <test started-at="2023-02-27T13:13:02Z" name="Test" finished-at="2023-02-27T13:13:16Z" duration-ms="13354">
-      <class name="Publications.SearchAuthor">
-        <test-method is-config="true" signature="browsers(java.lang.String)[pri:0, instance:Publications.SearchAuthor@53fe15ff]" started-at="2023-02-27T18:43:03Z" name="browsers" finished-at="2023-02-27T18:43:06Z" duration-ms="3185" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2023-03-01T15:17:04Z" name="Test1" finished-at="2023-03-01T15:17:48Z" duration-ms="44106">
+      <class name="Publications.Publications_Mainpage">
+        <test-method signature="browser_setup()[pri:0, instance:Publications.Publications_Mainpage@720653c2]" started-at="2023-03-01T20:47:04Z" name="browser_setup" description="Browser Setup" finished-at="2023-03-01T20:47:04Z" duration-ms="167" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Selenium runs Automation in chrome for SDM]]>
             </line>
           </reporter-output>
-        </test-method> <!-- browsers -->
-        <test-method signature="URL()[pri:0, instance:Publications.SearchAuthor@53fe15ff]" started-at="2023-02-27T18:43:06Z" name="URL" finished-at="2023-02-27T18:43:15Z" duration-ms="8844" status="PASS">
+        </test-method> <!-- browser_setup -->
+        <test-method signature="url_run()[pri:0, instance:Publications.Publications_Mainpage@720653c2]" started-at="2023-03-01T20:47:04Z" name="url_run" description="url load" finished-at="2023-03-01T20:47:12Z" duration-ms="7895" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[The Title of the page is ECCMA | Resources ]]>
             </line>
           </reporter-output>
-        </test-method> <!-- URL -->
-        <test-method signature="feed()[pri:0, instance:Publications.SearchAuthor@53fe15ff]" started-at="2023-02-27T18:43:15Z" name="feed" finished-at="2023-02-27T18:43:16Z" duration-ms="1303" status="PASS">
+        </test-method> <!-- url_run -->
+        <test-method signature="category_drpdown()[pri:0, instance:Publications.Publications_Mainpage@720653c2]" started-at="2023-03-01T20:47:12Z" name="category_drpdown" description="Category Drop-down check" finished-at="2023-03-01T20:47:15Z" duration-ms="2275" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- feed -->
-      </class> <!-- Publications.SearchAuthor -->
-    </test> <!-- Test -->
+        </test-method> <!-- category_drpdown -->
+        <test-method signature="search_author()[pri:0, instance:Publications.Publications_Mainpage@720653c2]" started-at="2023-03-01T20:47:15Z" name="search_author" description="Sends text, collects and verify text" finished-at="2023-03-01T20:47:16Z" duration-ms="1636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search_author -->
+        <test-method signature="searchtitle()[pri:0, instance:Publications.Publications_Mainpage@720653c2]" started-at="2023-03-01T20:47:16Z" name="searchtitle" description="Search - Title" finished-at="2023-03-01T20:47:19Z" duration-ms="2298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchtitle -->
+        <test-method signature="keyword()[pri:0, instance:Publications.Publications_Mainpage@720653c2]" started-at="2023-03-01T20:47:19Z" name="keyword" finished-at="2023-03-01T20:47:21Z" duration-ms="2357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- keyword -->
+        <test-method signature="pagination()[pri:0, instance:Publications.Publications_Mainpage@720653c2]" started-at="2023-03-01T20:47:21Z" name="pagination" finished-at="2023-03-01T20:47:43Z" duration-ms="21680" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='pagination']//a[text()='7']"}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.3', revision: '4b786a1e430'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d72abe5a24d7b0c796c417539d9a7869, findElement {using=xpath, value=//div[@id='pagination']//a[text()='7']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\JAYAPR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55422}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55422/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d72abe5a24d7b0c796c417539d9a7869]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='pagination']//a[text()='7']"}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.3', revision: '4b786a1e430'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d72abe5a24d7b0c796c417539d9a7869, findElement {using=xpath, value=//div[@id='pagination']//a[text()='7']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\JAYAPR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55422}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55422/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d72abe5a24d7b0c796c417539d9a7869
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at Publications.Publications_Mainpage.pagination(Publications_Mainpage.java:307)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pagination -->
+        <test-method is-config="true" signature="exit()[pri:0, instance:Publications.Publications_Mainpage@720653c2]" started-at="2023-03-01T20:47:43Z" name="exit" description="Close the browser" finished-at="2023-03-01T20:47:48Z" duration-ms="5750" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exit -->
+      </class> <!-- Publications.Publications_Mainpage -->
+    </test> <!-- Test1 -->
   </suite> <!-- Suite -->
 </testng-results>

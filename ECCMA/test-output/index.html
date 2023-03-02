@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\Jaya prakash\eclipse-workspace\ECCMA\testpublication.xml</span>
+                    <span>C:\Users\Jaya prakash\git\Automation_Ashok\ECCMA\testpublication.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Publications.Publications_Mainpage" class="method navigator-link" hash-for-method="pagination">pagination</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,12 +115,32 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Publications.SearchAuthor" class="method navigator-link" hash-for-method="URL">URL</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Publications.Publications_Mainpage" class="method navigator-link" hash-for-method="browser_setup">browser_setup</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Publications.SearchAuthor" class="method navigator-link" hash-for-method="feed">feed</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Publications.Publications_Mainpage" class="method navigator-link" hash-for-method="category_drpdown">category_drpdown</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Publications.Publications_Mainpage" class="method navigator-link" hash-for-method="keyword">keyword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Publications.Publications_Mainpage" class="method navigator-link" hash-for-method="search_author">search_author</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Publications.Publications_Mainpage" class="method navigator-link" hash-for-method="searchtitle">searchtitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Publications.Publications_Mainpage" class="method navigator-link" hash-for-method="url_run">url_run</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -121,24 +155,100 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Publications.SearchAuthor</span>
+              <img src="failed.png"/>
+              <span class="class-name">Publications.Publications_Mainpage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="URL">
-                  </a> <!-- URL -->
-                  <span class="method-name">URL</span>
+                  <a name="pagination">
+                  </a> <!-- pagination -->
+                  <span class="method-name">pagination</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;pagination&apos;]//a[text()=&apos;7&apos;]&quot;}
+  (Session info: chrome=110.0.5481.178)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.5.3&apos;, revision: &apos;4b786a1e430&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d72abe5a24d7b0c796c417539d9a7869, findElement {using=xpath, value=//div[@id=&apos;pagination&apos;]//a[text()=&apos;7&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\JAYAPR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55422}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55422/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d72abe5a24d7b0c796c417539d9a7869
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at Publications.Publications_Mainpage.pagination(Publications_Mainpage.java:307)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Publications.Publications_Mainpage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="browser_setup">
+                  </a> <!-- browser_setup -->
+                  <span class="method-name">browser_setup</span>
+                  <em>
+(Browser Setup)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="feed">
-                  </a> <!-- feed -->
-                  <span class="method-name">feed</span>
+                  <a name="category_drpdown">
+                  </a> <!-- category_drpdown -->
+                  <span class="method-name">category_drpdown</span>
+                  <em>
+(Category Drop-down check)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="keyword">
+                  </a> <!-- keyword -->
+                  <span class="method-name">keyword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="search_author">
+                  </a> <!-- search_author -->
+                  <span class="method-name">search_author</span>
+                  <em>
+(Sends text, collects and verify text)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchtitle">
+                  </a> <!-- searchtitle -->
+                  <span class="method-name">searchtitle</span>
+                  <em>
+(Search - Title)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="url_run">
+                  </a> <!-- url_run -->
+                  <span class="method-name">url_run</span>
+                  <em>
+(url load)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -146,19 +256,18 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Jaya prakash\eclipse-workspace\ECCMA\testpublication.xml</span>
+            <span class="header-content">C:\Users\Jaya prakash\git\Automation_Ashok\ECCMA\testpublication.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite parallel=&quot;none&quot; name=&quot;Suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
-    &lt;parameter name=&quot;browsername&quot; value=&quot;chrome&quot;/&gt;
+  &lt;test thread-count=&quot;15&quot; name=&quot;Test1&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Publications.SearchAuthor&quot;/&gt;
+      &lt;class name=&quot;Publications.Publications_Mainpage&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Test1 --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -170,7 +279,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test1 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -196,20 +305,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'URL')
-data.setCell(0, 2, 'Publications.SearchAuthor')
-data.setCell(0, 3, 8844);
+data.setCell(0, 1, 'pagination')
+data.setCell(0, 2, 'Publications.Publications_Mainpage')
+data.setCell(0, 3, 21680);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'feed')
-data.setCell(1, 2, 'Publications.SearchAuthor')
-data.setCell(1, 3, 1303);
+data.setCell(1, 1, 'url_run')
+data.setCell(1, 2, 'Publications.Publications_Mainpage')
+data.setCell(1, 3, 7895);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'keyword')
+data.setCell(2, 2, 'Publications.Publications_Mainpage')
+data.setCell(2, 3, 2357);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'searchtitle')
+data.setCell(3, 2, 'Publications.Publications_Mainpage')
+data.setCell(3, 3, 2298);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'category_drpdown')
+data.setCell(4, 2, 'Publications.Publications_Mainpage')
+data.setCell(4, 3, 2275);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'search_author')
+data.setCell(5, 2, 'Publications.Publications_Mainpage')
+data.setCell(5, 3, 1636);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'browser_setup')
+data.setCell(6, 2, 'Publications.Publications_Mainpage')
+data.setCell(6, 3, 167);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 38 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -221,9 +350,15 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">URL</span>
+              <span class="reporter-method-name">url_run</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">The Title of the page is ECCMA | Resources </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">browser_setup</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Selenium runs Automation in chrome for SDM</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -241,19 +376,41 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Publications.SearchAuthor</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">browsers(chrome)</span>
+              <div class="chronological-class-name">Publications.Publications_Mainpage</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">browser_setup</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">URL</span>
-                <span class="method-start">3187 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">feed</span>
-                <span class="method-start">12033 ms</span>
+                <span class="method-name">url_run</span>
+                <span class="method-start">168 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">category_drpdown</span>
+                <span class="method-start">8064 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">search_author</span>
+                <span class="method-start">10342 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchtitle</span>
+                <span class="method-start">11979 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">keyword</span>
+                <span class="method-start">14278 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">pagination</span>
+                <span class="method-start">16636 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">exit</span>
+                <span class="method-start">38340 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

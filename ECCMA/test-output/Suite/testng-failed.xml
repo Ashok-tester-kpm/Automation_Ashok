@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="none" name="Failed suite [Suite]">
-  <parameter name="browsername" value="chrome"/>
-  <test parallel="none" name="Test(failed)">
-    <parameter name="browsername" value="chrome"/>
+  <test parallel="none" name="Test1(failed)">
     <classes>
-      <class name="Publications.SearchAuthor">
+      <class name="Publications.Publications_Mainpage">
         <methods>
-          <include name="browsers"/>
-          <include name="feed"/>
+          <include name="pagination"/>
+          <include name="exit"/>
         </methods>
-      </class> <!-- Publications.SearchAuthor -->
+      </class> <!-- Publications.Publications_Mainpage -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

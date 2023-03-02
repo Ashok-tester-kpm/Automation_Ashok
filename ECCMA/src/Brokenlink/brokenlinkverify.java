@@ -1,19 +1,11 @@
 package Brokenlink;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -55,7 +47,7 @@ public class brokenlinkverify
     {	
 		driver.manage().window().maximize();
 		
-        String testurl[] = {"https://emdvcorasia.com/testing6"}; 	
+        String testurl[] = {""}; 	
         
         for(int d = 0; d< testurl.length ; d++)
         {
@@ -117,7 +109,7 @@ public class brokenlinkverify
 					            if(httpURLConnect.getResponseCode()>=400)
 					            	{
 					            		System.out.println("Broken Link - "+ linkUrl +"---> Message " + httpURLConnect.getResponseMessage()+" is a broken link --> "+ "The response code = " + 	httpURLConnect.getResponseCode());
-					            		ArrayList<String> failedlinks = new ArrayList<>(Arrays.asList(linkUrl));
+					            		
 					            		failedlinks.forEach(System.out::println);
 					            	}    
 					       
@@ -125,7 +117,6 @@ public class brokenlinkverify
 					            else
 					            	{
 					            		System.out.println(linkUrl+" - "+httpURLConnect.getResponseMessage() + " The response code = " + httpURLConnect.getResponseCode());
-					            		ArrayList<String> passlinks = new ArrayList<>(Arrays.asList(linkUrl));
 					            		passlinks.forEach(System.out::println);
 					                }
 					        }

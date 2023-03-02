@@ -4,8 +4,8 @@
   <test thread-count="5" name="Test">
     <classes>
       <parameter name="browsername" value="chrome">
-      <class name="Brokenlink.AssociateMember"/>
+      <class name="Brokenlink.brokenlinkverify"/>
       </parameter>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> 
+</suite> 

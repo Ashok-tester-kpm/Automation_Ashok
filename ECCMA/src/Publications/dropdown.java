@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class dropdown extends Base
 {
-	@Test(priority = 2)
+	@Test(priority = 1)
 	public void drpdown()
 	{
 		Select category = new Select(driver.findElement(By.xpath("//select[@id='category']")));
@@ -57,7 +57,7 @@ public class dropdown extends Base
 			for(int c = 0 ; c < catdrop.size() ; c ++)
 			{
 				System.out.println("The drop down content did not match the required list ");
-				System.out.println("The Un-Matched content dound is "+catdrop.get(c));
+				System.out.println("The Un-Matched content found is "+catdrop.get(c));
 			}
 		}
 		

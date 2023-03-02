@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test" >
+<suite name="Suite" thread-count ="5" >
+  <test thread-count="15" name="Test1" >
   	<classes>
-      <parameter name="browsername" value="chrome">
-      <class name="Publications.SearchAuthor"/>
-      </parameter>
+      <class name="Publications.Publications_Mainpage"/>
     </classes>
   </test> <!-- Test -->
-</suite> <!-- Suite -->
+</suite> 
